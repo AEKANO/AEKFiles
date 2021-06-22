@@ -3,6 +3,10 @@ local text = msg.content_.text_
 if ChatType == 'sp' or ChatType == 'gp'  then
 if Manager(msg) then
 if text == "all" or text == "@all" then
+if DevAek:get(AEK..'Aekan:lock_TagAll'..msg.chat_id_) then
+Dev_Aek(msg.chat_id_, msg.id_, 1, '❦ ⁞ *هذا الامر معطل* ', 1, 'md')
+return false  
+end
 if DevAek:get(AEK.."Aek:TagAll:Time"..msg.chat_id_..':'..msg.sender_user_id_) then  
 Dev_Aek(msg.chat_id_, msg.id_, 1, '❦ ⁞ انتظر دقيقه بعد ارسال الامر', 1, 'md')
 return false  
